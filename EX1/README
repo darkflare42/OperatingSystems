@@ -1,0 +1,43 @@
+odedab, okeren
+Oded Abrams (203011226), Or Keren (301644522)
+EX: 1
+
+FILES:
+myfile.c -- a file with some code
+myfile.h -- a file with some headers
+
+REMARKS:
+These are some remarks that
+I want the graders to know
+about this submission.
+
+ANSWERS:
+
+Task1: WHO THE FUCK KNOWS
+
+
+Task2:
+1) Let us look at two examples that show the unwanted side-effects of using interrupts:
+	a) Let there be two programs D and W, Where D is a program the is about to delete a certain file
+	   and W is a program that wants to write into the certain file (that is about to be deleted)
+	   The CPU will run program D first. It will run the program and when reaching the program's
+	   "delete file" command, it will pause, save the current state and send the delete request
+	   to the relevant I/O device.
+	   While waiting for the I/O device to finish deleting, the CPU will run the W program.
+	   The CPU will reach the "write to file" command and then save the current state and send the
+	   write command to the I/O device.
+	   When the I/O device finishes deleting the file, it will send and INT to the CPU announcing
+	   that it has finished, which will cause program D to return to the CPU and finish running.
+	   At this stage, the file does not exist, and thus when the I/O will receive the command to
+	   write to the deleted file it will send an INT to the CPU announcing that an exception has 
+	   occurred.
+	b) Let there be a program that uses the system clock for a continuous amount of time (i.e it 
+	   has to sit on the CPU for a "long" time sampling the system clock and computing something 
+	   with it). If during the operation of the program, an INT was sent by an Input device like 
+	   the Mouse or Keyboard, then the CPU must save the current state of the program and deal with
+	   the INT before restoring the state and allowing the program to continue. 
+	   This will cause the program's sampling of time during its operation to be skewed, since it 
+	   was not on the CPU continuously for the whole duration it "needed" to.
+	   
+
+	   
