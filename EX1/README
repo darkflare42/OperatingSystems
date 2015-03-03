@@ -39,5 +39,7 @@ Task2:
 	   This will cause the program's sampling of time during its operation to be skewed, since it 
 	   was not on the CPU continuously for the whole duration it "needed" to.
 	   
-
-	   
+2) If we choose to block all incoming interruptions, in both the cases above, it will indeed solve the
+problem caused by the interaction between the interruptions. However, while any program is running
+in the CPU at any given time will cause the computer to "hang", i.e. be completely inresponsive to
+to input.
