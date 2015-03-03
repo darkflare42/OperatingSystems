@@ -64,8 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="WhatIDo.cpp" />
-    <ClCompile Include="whatudo.cpp" />
+    <ClCompile Include="osm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README" />
