@@ -18,5 +18,8 @@
     <ClCompile Include="WhatIDo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="whatudo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
