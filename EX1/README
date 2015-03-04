@@ -3,13 +3,10 @@ Oded Abrams (203011226), Or Keren (301644522)
 EX: 1
 
 FILES:
-myfile.c -- a file with some code
-myfile.h -- a file with some headers
+osm.cpp -- a library which measures the time the computer takes to do several things
+
 
 REMARKS:
-These are some remarks that
-I want the graders to know
-about this submission.
 
 ANSWERS:
 
