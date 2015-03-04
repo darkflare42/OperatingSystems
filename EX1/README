@@ -13,7 +13,28 @@ about this submission.
 
 ANSWERS:
 
-Task1: WHO THE FUCK KNOWS
+Task1: 
+The program first creates two directories (relative path) "os" and a subdirectory "2015" 
+(i.e: "os/2015") using the mkdir function
+It then uses the brk() function to allocate memory.
+Then the open function is called, which creates a file called "info" under "os/2015" directory using the following
+flags:
+O_WRONLY - The file will only be writable
+O_CREAT - The file will be created if it does not exist
+O_TRUNC - If the file DOES exist, then it is overwritten
+The function open returns 3, which indicates that the file was created correctly with no errors, and the number 3
+is the file identifier.
+
+After creating the file, the fstat function is called to retrieve information regarding the file, and mmap is called
+to map the file into virtual memory. It uses the flags PROT_READ and PROT_WRITE to protect the file in memory from
+reading and writing
+
+Afterwards the function calls the write function, which writes into the file 122 blank spaces. 
+The program then calls the close function, which closes the file stream for the current file ("info"). It unmaps
+the file from the virtual memory and then removes the folders "os/2015" and "os" using rmdir function.
+
+In summary: The program creates a directory and a subdirectory "os/2015", creates a file called info inside "2015" 
+directory, writes 122 spaces in it, and then deletes the folders (and file)
 
 
 Task2:
